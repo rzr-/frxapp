@@ -1,0 +1,29 @@
+<!-- app/templates/auth/login.html -->
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Login {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+            {{ utils.flashed_messages() }}
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1 class="h1_center">Login to your account</h1>
+                <hr class="intro-divider">
+                <form method="post" role="form">
+                    {{ form.hidden_tag() }}
+                    {{ wtf.form_errors(form, hiddens="only") }}
+
+                    {{ wtf.form_field(form.email) }}
+                    {{ wtf.form_field(form.password) }}
+                    {{ wtf.form_field(form.login, button_map={'login':'btn btn-primary btn-lg'}) }}
+                    <div class="pull-right"><a href="{{ url_for('auth.reset') }}" class="btn btn-info btn-lg" role="button">Reset Password</a></div>
+                </form>
+                {#{{ wtf.quick_form(form, button_map={'login':'btn btn-primary btn-lg', 'reset':'btn btn-info btn-lg float-left'}) }}#}
+            </div>
+    </div>
+</div>
+{% endblock %}

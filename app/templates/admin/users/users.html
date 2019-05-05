@@ -1,0 +1,85 @@
+<!-- app/templates/admin/users/users.html -->
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Users {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+            {{ utils.flashed_messages() }}
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10">
+                <h1 class="h1_center">Users</h1>
+                <hr class="intro-divider">
+                {% if users %}
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col"> username,<br />First Name,<br />Last Name</th>
+                                <th scope="col"> Email </th>
+                                <th scope="col"> Sign-up Date </th>
+                                <th scope="col"> Activated </th>
+                                <th scope="col"> Notifications </th>
+                                <th scope="col"> Type </th>
+                                <th scope="col"> Edit </th>
+                                <th scope="col"> Delete </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for user in users %}
+                            <tr>
+                                <td data-title="username,&#13;&#10;First Name,&#13;&#10;Last Name"> {{ user.username }}<br />{{ user.first_name }}<br />{{ user.last_name }}</td>
+                                <td data-title="Email"> {{ user.email }} </td>
+                                <td data-title="Sign-up Date"> {{ user.sign_up_date }} </td>
+
+                                <td data-title="Activated">
+                                    {%if user.activated == 0 %}
+                                    No
+                                    {% else %}
+                                    Yes
+                                    {% endif %}
+                                </td>
+
+
+                                <td data-title="Notifications">
+                                    {% if user.notifications == 0 %}
+                                    Disabled
+                                    {% else %}
+                                    Enabled
+                                    {% endif %}
+                                </td>
+
+                                <td data-title="Type">
+                                    {% if user.type == 0 %}
+                                    Basic
+                                    {% else %}
+                                    Premium
+                                    {% endif %}
+                                </td>
+
+                                <td data-title="Edit">
+                                    <a href="{{ url_for('admin.edit_user', id=user.id) }}" class="text-white"><i class="fa fa-pencil edit"></i> Edit </a>
+                                </td>
+                                <td data-title="Delete">
+                                    {% if user.type != 2 %}
+                                    <a href="{{ url_for('admin.delete_user', id=user.id) }}" class="text-danger"><i class="fa fa-trash delete"></i> Delete </a>
+                                    {% else %}
+                                    <!--<i class="fa fa-trash delete"></i> Delete  -->
+                                    <i class="fa fa-times-circle fa-2x"></i>
+                                    {% endif %}
+
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

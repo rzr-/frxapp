@@ -1,0 +1,207 @@
+<!-- app/templates/home/index.html -->
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block body %}
+<div class="se-pre-con"></div>
+    <div id="top_home" class="section main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-4">
+                    <h1 class="main-heading">FRXapp signals</h1>
+                    <p class="main-subtitle">Be the first to trade with quality signals!</p>
+                    <a href="{{ url_for('auth.register') }}" class="button">Sign Up</a>
+                    <a href="#features" class="button hollow">Learn More</a>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-sm-6">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div id="tradingview_0daa8"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL chart</span></a> by TradingView</div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                            new TradingView.widget({
+                                //"autosize": true,
+                                "symbol": "NASDAQ:AAPL",
+                                "interval": "60",
+                                "timezone": "Etc/UTC",
+                                "theme": "Light",
+                                "style": "1",
+                                "locale": "en",
+                                "toolbar_bg": "#f1f3f6",
+                                "enable_publishing": false,
+                                "allow_symbol_change": true,
+                                "container_id": "tradingview_0daa8",
+                                "height": "450",
+                                "width": "auto"
+
+                            });
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section press">
+        <div class="w-container">
+            <div class="small-text"> </div>
+            <div class="div-block">
+                <!--<img class="press-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24091ecce71c_logo_Fastcompany.svg" width="70" alt=""/>-->
+                <!--<img class="press-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24b237cce71f_logo_Forbes.svg" width="70" alt=""/>-->
+                <!--<img class="press-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2417bccce724_logo_techcrunch.svg" width="70" alt=""/>-->
+                <!--<img class="press-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa248e66cce728_logo_Wired.svg" width="70" alt=""/>-->
+                <!--<img class="press-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa249bcbcce721_logo_zdnet.svg" width="70" alt=""/>-->
+            </div>
+        </div>
+    </div>
+    <div id="features" class="section">
+        <div class="w-container">
+            <h2>Sync Across All Devices</h2>
+            <div class="section-subtitle">Everything you need to make your business grow <strong class="bold-text">super fast</strong>!</div>
+            <div class="feature-row w-row">
+                <div class="w-col w-col-6"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247127cce72e_Metric-screenshot2.png" data-ix="fade-in-on-scroll" srcset="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247127cce72e_Metric-screenshot2-p-500x320.png 500w, https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247127cce72e_Metric-screenshot2-p-800x512.png 800w, https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247127cce72e_Metric-screenshot2.png 814w" sizes="(max-width: 767px) 96vw, (max-width: 991px) 354px, 460px" alt="" /></div>
+                <div class="w-col w-col-6">
+                    <div class="main-feature-group"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa242849cce72b_iconmonstr-laptop-2-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Web Application</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-row w-row">
+                <div class="w-col w-col-6">
+                    <div class="main-feature-group"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa246d93cce72c_iconmonstr-download-13-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Mobile App</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="w-col w-col-6"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247201cce734_Metric-screenshot-phone.png" data-ix="fade-in-on-scroll" srcset="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247201cce734_Metric-screenshot-phone-p-500x243.png 500w, https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247201cce734_Metric-screenshot-phone-p-800x389.png 800w, https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa247201cce734_Metric-screenshot-phone.png 1000w" sizes="(max-width: 767px) 96vw, (max-width: 991px) 354px, 460px" alt="" /></div>
+            </div>
+            <div class="small-features-row w-row">
+                <div class="w-col w-col-3">
+                    <div class="feature"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2441dccce727_iconmonstr-control-panel-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Dashboard</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+                    </div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div class="feature"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2416e1cce729_iconmonstr-sitemap-7-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Custom Rules</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+                    </div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div class="feature"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24b2f9cce71e_iconmonstr-save-9-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Presets</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+                    </div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div class="feature"><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24c951cce719_iconmonstr-bar-chart-4-icon.svg" height="30" alt="" class="feature-icon" />
+                        <h3>Metrics</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pricing" class="section purple">
+        <div class="w-container">
+            <h2>Plans &amp; Pricing</h2>
+            <div class="section-subtitle">No credit card required. No risk, <strong class="bold-text">30-day money back guarantee</strong>!</div>
+            <div class="w-row">
+                <div class="w-col w-col-3">
+                    <div data-ix="fade-in-on-scroll" class="plan-wrapper">
+                        <h3>Starter</h3>
+                        <div class="price-point"><strong class="price-accent">$15</strong> /month</div>
+                        <div class="price-point"><strong class="price-accent">500</strong> Data Points</div>
+                        <div class="price-point"><strong class="price-accent">1</strong> Team Member</div>
+                        <div class="divider"></div>
+                        <div class="addl-feature"><strong>Email</strong> Support</div>
+                        <div class="addl-feature inactive">IOS and Android App</div>
+                        <div class="addl-feature inactive">Customizable Dashboard</div>
+                        <div class="addl-feature inactive">Metric API</div><a href="index.html#" class="button in-pricing">Choose Plan</a></div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div data-ix="fade-in-on-scroll" class="plan-wrapper">
+                        <h3>Professional</h3>
+                        <div class="price-point"><strong class="price-accent">$30</strong> /month</div>
+                        <div class="price-point"><strong class="price-accent">2000</strong> Data Points</div>
+                        <div class="price-point"><strong class="price-accent">1</strong> Team Member</div>
+                        <div class="divider"></div>
+                        <div class="addl-feature"><strong>Email</strong> Support</div>
+                        <div class="addl-feature"><strong>IOS</strong> and <strong>Android</strong> App</div>
+                        <div class="addl-feature inactive">Customizable Dashboard</div>
+                        <div class="addl-feature inactive">Metric API</div><a href="index.html#" class="button in-pricing">Choose Plan</a></div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div data-ix="fade-in-on-scroll" class="plan-wrapper">
+                        <h3>Startup</h3>
+                        <div class="price-point"><strong class="price-accent">$75</strong> /month</div>
+                        <div class="price-point"><strong class="price-accent">5000</strong> Data Points</div>
+                        <div class="price-point"><strong class="price-accent">3</strong> Team Member</div>
+                        <div class="divider"></div>
+                        <div class="addl-feature"><strong>Email</strong> Support</div>
+                        <div class="addl-feature"><strong>IOS</strong> and <strong>Android</strong> App</div>
+                        <div class="addl-feature"><strong>Customizable</strong> Dashboard</div>
+                        <div class="addl-feature inactive">Metric API</div><a href="index.html#" class="button in-pricing">Choose Plan</a></div>
+                </div>
+                <div class="w-col w-col-3">
+                    <div data-ix="fade-in-on-scroll" class="plan-wrapper">
+                        <h3>Business</h3>
+                        <div class="price-point"><strong class="price-accent">$250</strong> /month</div>
+                        <div class="price-point"><strong class="price-accent">15000</strong> Data Points</div>
+                        <div class="price-point"><strong class="price-accent">10</strong> Team Member</div>
+                        <div class="divider"></div>
+                        <div class="addl-feature"><strong>Priority</strong> Support</div>
+                        <div class="addl-feature"><strong>IOS</strong> and <strong>Android</strong> App</div>
+                        <div class="addl-feature"><strong>Customizable</strong> Dashboard</div>
+                        <div class="addl-feature">Metric <strong>API</strong></div><a href="index.html#" class="button in-pricing">Choose Plan</a></div>
+                </div>
+            </div>
+            <div class="additional-contact">Need more Data Points or Team Members? Please <a href="index.html#" class="page-link">contact us</a>.</div>
+        </div>
+    </div>
+    <div id="customers" class="section">
+        <div class="w-container">
+            <h2>What People Say About Us</h2>
+            <div data-animation="slide" data-duration="500" data-infinite="1" class="testimonial-slider w-slider">
+                <div class="w-slider-mask">
+                    <div class="testimony-slide w-slide">
+                        <p class="testimony-text">“Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.”</p><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24f572cce70c_04f14af5199093cdd29a89eb295febf5.jpeg" width="64" alt="" class="person" />
+                        <div class="name">Kyle Killit</div>
+                        <div class="title">Designer at Tiempo Labs</div>
+                    </div>
+                    <div class="testimony-slide w-slide">
+                        <p class="testimony-text">“Ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna”</p><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2449f9cce715_sergie-square.jpg" width="100" alt="" class="person" />
+                        <div class="name">Sergie Kalashnikov</div>
+                        <div class="title">CEO at BentoBox</div>
+                    </div>
+                    <div class="testimony-slide w-slide">
+                        <p class="testimony-text">“Nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.”</p><img src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2400eacce714_bryant-square.jpg" width="100" alt="" class="person" />
+                        <div class="name">Bryant Chou</div>
+                        <div class="title">CTO at Slapper Labs</div>
+                    </div>
+                </div>
+                <div class="slider-arrow w-slider-arrow-left">
+                    <div class="w-icon-slider-left"></div>
+                </div>
+                <div class="slider-arrow w-slider-arrow-right">
+                    <div class="w-icon-slider-right"></div>
+                </div>
+                <div class="slide-nav w-slider-nav w-round"></div>
+            </div>
+        </div>
+    </div>
+    <div class="section clients">
+        <div class="w-container">
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24a0c2cce70d_client_logo_johnson_and_johnson.png" width="162" alt=""/>-->
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa242e1fcce709_client_logo_tesla.png" width="160" alt=""/>-->
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa24d17dcce705_client_logo_ouya.png" width="162" alt=""/>-->
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa2485fecce710_client_logo_chartboost.png" width="162"/>-->
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa244d45cce707_client_logo_mammoth.png" width="162" alt=""/>-->
+            <!--<img class="client-logo" src="https://uploads-ssl.webflow.com/5bd0a3e265aa24772fcce6f5/5bd0a3e265aa246217cce706_client_logo_neutrogena.png" width="162"/>-->
+        </div>
+    </div>
+{% endblock %}

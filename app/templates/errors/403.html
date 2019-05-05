@@ -1,0 +1,23 @@
+<!-- app/templates/errors/403.html -->
+{% import "bootstrap/utils.html" as utils %}
+{% extends "base.html" %}
+{% block title %} Forbidden {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+            {{ utils.flashed_messages() }}
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1 class="h1_center">403 Error</h1>
+                <h3 class="h1_center">You do not have sufficient permissions to access this page.</h3>
+                <hr class="intro-divider">
+                <a href="{{ url_for('home.homepage') }}" class="btn btn-default center-block btn-lg">
+                    <i class="fa fa-home"></i> Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

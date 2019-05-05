@@ -1,0 +1,68 @@
+<!-- app/templates/user/signals/signals.html -->
+{% import "bootstrap/utils.html" as utils %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Signals {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+                {{ utils.flashed_messages() }}
+        </div>
+        <div class="row">
+            <div class="col-sm-offset-1 col-sm-10">
+                <h1 class="h1_center">Signals</h1>
+                {% if signals %}
+                <hr class="intro-divider">
+                <div class="table-responsive">
+                <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                            <th scope="col"> Type </th>
+                            <th scope="col"> Element </th>
+                            <th scope="col"> Entry </th>
+                            <th scope="col"> Take profit </th>
+                            <th scope="col"> Stop loss </th>
+                            <th scope="col"> Date added </th>
+                            <th scope="col"> Date expiry </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      {% for signal in signals %}
+                        <tr>
+                            <td data-title="Type">
+                                {% if signal.type == "short" %}
+                                <span class="signal short">
+                                {{ typeDict.get(signal.type) }}
+                                </span>
+                                {% elif signal.type == "long" %}
+                                <span class="signal long">
+                                {{ typeDict.get(signal.type) }}
+                                </span>
+                                {% else %}
+                                typeDict.get(signal.type)
+                                {% endif %}
+                            </td>
+                            <td data-title="Element"> {{ signal.element }} </td>
+                            <td data-title="Entry"> {{ signal.entry }} </td>
+                            <td data-title="Take profit"> {{ signal.take_profit }} </td>
+                            <td data-title="Stop loss"> {{ signal.stop_loss }} </td>
+                            <td data-title="Date added"> {{ signal.date_added }} </td>
+                            <td data-title="Date expiry"> {{ signal.date_expiry }} </td>
+                        </tr>
+                      {% endfor %}
+                      </tbody>
+                    </table>
+                </div>
+                {% else %}
+                    <h3 class="h1_center"> No signals have been added. </h3>
+                    <hr class="intro-divider">
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

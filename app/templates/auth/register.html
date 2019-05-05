@@ -1,0 +1,18 @@
+<!-- app/templates/auth/register.html -->
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Register {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+                <h1 class="h1_center">Register for an account</h1>
+                <hr class="intro-divider">
+                <br/>
+                {{ wtf.quick_form(form, button_map={'submit':'btn btn-primary center-block btn-lg'}) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

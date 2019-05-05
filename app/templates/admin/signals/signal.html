@@ -1,0 +1,21 @@
+<!-- app/templates/admin/signals/signal.html -->
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends "base.html" %}
+{% block title %} Signal {% endblock %}
+{% block body %}
+<div id="top" class="section main">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-offset-2 col-sm-8">
+            {% if add_signal %}
+                <h1 class="h1_center">Add Signal</h1>
+            {% else %}
+                <h1 class="h1_center">Edit Signal</h1>
+            {% endif %}
+            <hr class="intro-divider">
+            {{ wtf.quick_form(form, button_map={'submit':'btn btn-primary center-block btn-lg'}) }}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

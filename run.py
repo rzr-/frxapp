@@ -3,5 +3,7 @@ import os
 from app import create_app
 import configuration
 
-config_name = os.getenv('FLASK_CONFIG')
+from flask.ext.heroku import Heroku
+
 app = create_app(configuration.DevelopmentConfig)
+heroku = Heroku(app)

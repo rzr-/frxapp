@@ -9,7 +9,7 @@
 | SECRET_KEY | random_secret_key |
 | LONG_BIG_PASSWORD_SALT_VERY_SALTED | random_secret_salt |
 | SOME_SECRET_KEY | some_more_secret_key |
-| SQLALCHEMY_DB_URI | Check Postgres creditentials: ```postgres://[username]:[password]@[server]:[port]/[db]```  |
+| SQLALCHEMY_DB_URI | Check Postgres credentials: ```postgres://[username]:[password]@[server]:[port]/[db]```  |
 | MAIL_SERVER | i.e. smtp.gmail.com |
 | MAIL_PORT | i.e. 465 for gMail |
 | MAIL_USERNAME | email address |

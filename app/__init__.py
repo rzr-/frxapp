@@ -11,10 +11,17 @@ app = Flask(__name__)
 app.config.from_object(configuration.DevelopmentConfig)
 
 Bootstrap(app)
-db = SQLAlchemy(app)
-login_manager.init_app(app)
+db = SQLAlchemy()
+db.init_app(app)
+with app.app_context():
+    # Extensions like Flask-SQLAlchemy now know what the "current" app
+    # is while within this block. Therefore, you can now run........
+    db.create_all()
+
+
 migrate = Migrate(app, db)
 login_manager = LoginManager()
+login_manager.init_app(app)
 login_manager.login_message = "You must be logged in to access this page."
 login_manager.login_view = "auth.login"
 

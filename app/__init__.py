@@ -7,18 +7,20 @@ from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from . import configuration
 
-# after the db variable initialization
-login_manager = LoginManager()
-
 app = Flask(__name__)
 app.config.from_object(configuration.DevelopmentConfig)
 
 Bootstrap(app)
-# db.init_app(app)
-# db variable initialization
 db = SQLAlchemy(app)
+db.init_app(app)
+with app.app_context():
+    # Extensions like Flask-SQLAlchemy now know what the "current" app
+    # is while within this block. Therefore, you can now run........
+    db.create_all()
+
 login_manager.init_app(app)
 migrate = Migrate(app, db)
+login_manager = LoginManager()
 login_manager.login_message = "You must be logged in to access this page."
 login_manager.login_view = "auth.login"
 

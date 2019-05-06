@@ -12,8 +12,6 @@ app.config.from_object(configuration.DevelopmentConfig)
 
 Bootstrap(app)
 db = SQLAlchemy(app)
-db.init_app(app)
-
 login_manager.init_app(app)
 migrate = Migrate(app, db)
 login_manager = LoginManager()

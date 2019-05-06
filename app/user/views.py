@@ -3,8 +3,8 @@ from flask import flash, redirect, render_template, url_for, current_app, Markup
 from flask_login import current_user, login_required
 from .forms import UserEditForm, PasswordForm
 from . import user
-from .. import db
-from ..models import Signal, User
+# from .. import db
+from ..models import Signal, User, db
 from ..auth import views as auth
 from itsdangerous import URLSafeTimedSerializer
 

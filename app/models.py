@@ -1,7 +1,9 @@
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from app import db, login_manager
+from app import login_manager
+# db variable initialization
+db = SQLAlchemy(app)
 
 class User(UserMixin, db.Model):
     # Create an User table

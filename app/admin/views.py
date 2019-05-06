@@ -4,8 +4,8 @@ from flask_login import current_user, login_required
 
 from . import admin
 from .forms import SignalForm, UserEditForm
-from .. import db
-from ..models import Signal, User
+# from .. import db
+from ..models import Signal, User, db
 
 from datetime import datetime, timedelta, timezone
 from ..auth import views as mailing

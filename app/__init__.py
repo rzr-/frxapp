@@ -1,7 +1,7 @@
 # app/__init__.py
 # third-party imports
 from flask import abort, Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap

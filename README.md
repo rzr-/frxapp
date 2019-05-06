@@ -15,17 +15,19 @@
 | MAIL_USERNAME | email address |
 | MAIL_PASSWORD | pa$$word |
 | MAIL_DEFAULT_SENDER | email address|
+
 4. Connect git repository to the app and deploy
-5. run ```bash``` console
-5.1 ```$ flask shell```
-5.2 import DB and models
-```from app.models import User```
-```from app import db```
-5.3 Create DB tables
-```db.create_all()```
-5.4. Create admin user
-```admin = User(email="admin@email.x", username="admin", password="passowrd", type="2")```
-5.5. Add admin user
-```db.session.add(admin)```
-5.6 Commit changes to the db
-```db.session.commit()```
+5. run ```bash``` console:
+    - ```$ flask shell```
+    - import DB and models
+    ```from app.models import User```
+    ```from app import db```
+    - Create DB tables
+    ```db.create_all()```
+    - Create admin user
+    ```admin = User(email="admin@email.x", username="admin", password="passowrd", type="2")```
+    - Add admin user
+    ```db.session.add(admin)```
+    - Commit changes to the db
+    ```db.session.commit()```
+                

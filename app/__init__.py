@@ -7,6 +7,9 @@ from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
 from . import configuration
 
+# after the db variable initialization
+login_manager = LoginManager()
+
 def create_app(config):
     app = Flask(__name__)
     app.config.from_object(config)
@@ -54,7 +57,6 @@ app = create_app(configuration.DevelopmentConfig)
 # db variable initialization
 db = SQLAlchemy(app)
 
-# after the db variable initialization
-login_manager = LoginManager()
+
 
 migrate = Migrate(app, db)

@@ -4,3 +4,4 @@ from app import create_app
 import configuration
 
 app = create_app(configuration.DevelopmentConfig)
+db = SQLAlchemy(app)

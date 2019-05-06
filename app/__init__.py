@@ -5,7 +5,7 @@ from flask import abort, Flask, render_template
 from flask_login import LoginManager
 from flask_migrate import Migrate
 from flask_bootstrap import Bootstrap
-
+from . import configuration
 
 # after the db variable initialization
 login_manager = LoginManager()
@@ -52,3 +52,5 @@ def create_app(config):
         abort(500)
 
     return app
+
+app = create_app(configuration.DevelopmentConfig)
